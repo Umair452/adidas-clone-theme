@@ -372,5 +372,10 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {% comment %} swiper js cdn {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
+
+    {% comment %} swiper js cdn ended {% endcomment %}
   </body>
 </html>
