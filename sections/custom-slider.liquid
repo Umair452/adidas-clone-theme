@@ -1,22 +1,19 @@
 {{ 'custom-slider.css' | asset_url | stylesheet_tag }}
 
 
-
 <div class="swiper mySwiper">
-    {% for block in section.blocks %}
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        
-            {% assign product = all_products[block.settings.selected_product] %}
-            <div>
-              {{ product.title }}
-            </div>
-          
-      </div>
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.selected_product] %}
+        <div class="swiper-slide">
+          <div>
+            {{ product.title }}
+          </div>
+        </div>
+      {% endfor %}
     </div>
-{% endfor %}
     <div class="swiper-button-next">
-        <span></span>
+      <span></span>
     </div>
     <div class="swiper-pagination"></div>
   </div>
