@@ -4,10 +4,10 @@
 
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div >
+      <div class="swiper-slide">
         {% for block in section.blocks %}
             {% assign product = all_products[block.settings.selected_product] %}
-            <div class="swiper-slide">
+            <div>
               {{ product.title }}
             </div>
           {% endfor %}
