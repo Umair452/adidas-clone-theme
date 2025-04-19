@@ -6,11 +6,11 @@
       {% for block in section.blocks %}
         {% assign product = all_products[block.settings.selected_product] %}
         <div class="swiper-slide">
-          <div>
+          
             <h5>{{ product.title }}</h5>
             <img src="{{ product.featured_image | img_url }}" alt="image" height="" width="">
             <p>{{ product.price }}</p>
-          </div>
+          
         </div>
       {% endfor %}
     </div>
