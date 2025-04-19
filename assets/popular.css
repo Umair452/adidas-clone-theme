@@ -1,13 +1,26 @@
 .popularMain{
+    display: flex;
+    flex-wrap: wrap;
     margin:4%;
+}
+
+.popularMain h2{
+    font-size:3.5rem;
+    font-weight:600;
+}
+.popularItem h1{
+    font-weight: 600;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
 }
 .popularItem hr{
     margin:0;
+    background-color: #000;
 }
 .popularItem{
-    width:23vw;
+    width:28vw;
 }
 .popularItem:hover{
-    border-bottom:5px solid #000;
+    border-bottom:8px solid #000;
     cursor:pointer;
 }
