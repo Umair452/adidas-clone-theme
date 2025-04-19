@@ -1,6 +1,10 @@
 {{ 'custom-slider.css' | asset_url | stylesheet_tag }}
 
 
+<div>
+  <img width="" height="" src="{{ section.settings.custom_image | img_url }}" alt="Custom Image">
+</div>
+
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
@@ -22,6 +26,8 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
+
+
   <script>
     var swiper = new Swiper(".mySwiper", {
         
@@ -45,6 +51,11 @@
                 "id": "custom_text",
                 "label": "Custom Text",
                 "default": "Hello, World!"
+            },
+            {
+            "type": "image_picker",
+            "id": "custom_image",
+            "label": "Custom Image",
             }
         ],
        "blocks": [
