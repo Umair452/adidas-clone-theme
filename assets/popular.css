@@ -1,0 +1,13 @@
+.popularMain{
+    margin:4%;
+}
+.popularItem hr{
+    margin:0;
+}
+.popularItem{
+    width:23vw;
+}
+.popularItem:hover{
+    border-bottom:5px solid #000;
+    cursor:pointer;
+}
