@@ -8,7 +8,7 @@
         <div class="swiper-slide">
           <div>
             {{ product.title }}
-            <img src="{{ product.featured_image }}" alt="image" height="" width="">
+            <img src="{{ product.featured_image | img_url }}" alt="image" height="" width="">
           </div>
         </div>
       {% endfor %}
