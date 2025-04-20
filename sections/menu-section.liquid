@@ -6,9 +6,10 @@
    
     {% for block in section.blocks %}
         <div class="menu-section-inner">
-        {% if block.type == 'menu_heading' %}
+        {% if block.settings.heading_text != blank %}
             <h2 class="menu-heading">{{ block.settings.heading_text }}</h2>
-        {% elsif block.type == 'menu_link' %}
+        {% endif %}
+            {% if block.settings.link_text != blank %}
             <a href="{{ block.settings.link_url }}" class="menu-link">{{ block.settings.link_text }}</a>
         {% endif %}
     </div>
