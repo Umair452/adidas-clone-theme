@@ -2,7 +2,7 @@
 
 
 <div class="custom-information-section" style="background-color: {{ section.settings.background_color }}">
-    
+    <div class="custom-information-inner">
     {% if section.settings.heading %}
         <h2 class="custom-heading">{{ section.settings.heading }}</h2>
     {% endif %}
@@ -12,6 +12,7 @@
     {% if section.settings.logo %}
         <img width="" height="" src="{{ section.settings.logo | image_url }}" alt="Logo" class="custom-logo">
     {% endif %}
+</div>
 </div>
 
 {% schema %}
