@@ -1,10 +1,10 @@
-.menuSectionContainer{
+.menu-section{
     display: flex;
     justify-content: space-between;
     margin: 4%;
 }
 
-.menu-section{
+.menu-section-inner{
     display: flex;
     flex-direction: column;
 }
