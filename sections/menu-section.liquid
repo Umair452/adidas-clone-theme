@@ -1,0 +1,61 @@
+
+<div class="menu-section">
+    {% for block in section.blocks %}
+        {% if block.type == 'menu_heading' %}
+            <h2 class="menu-heading">{{ block.settings.heading_text }}</h2>
+        {% elsif block.type == 'menu_link' %}
+            <a href="{{ block.settings.link_url }}" class="menu-link">{{ block.settings.link_text }}</a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+{% schema %}
+{
+    "name": "Menu Section",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "menu_heading",
+            "name": "Menu Heading",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading_text",
+                    "label": "Heading Text"
+                }
+            ]
+        },
+        {
+            "type": "menu_link",
+            "name": "Menu Link",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "link_text",
+                    "label": "Link Text"
+                },
+                {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "Link URL"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Menu Section",
+            "category": "Menu",
+            "blocks": [
+                {
+                    "type": "menu_heading"
+                },
+                {
+                    "type": "menu_link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
