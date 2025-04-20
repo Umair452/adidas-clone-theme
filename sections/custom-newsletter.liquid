@@ -1,74 +1,80 @@
+<div class="custom-newsletter" style="background-color: {{ section.settings.background_color }};">
+  <div class="newsletter-content">
+    <h2>{{ section.settings.heading_text }}</h2>
 
-    <div class="custom-newsletter" style="background-color: {{ section.settings.background_color }};">
-        <div class="newsletter-content">
-            <h2>{{ section.settings.heading_text }}</h2>
-            
-                
-                <button style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }};">
-                    {{ section.settings.button_text }}
-                </button>
-            
-        </div>
-    </div>
+    <button style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }};">
+      {{ section.settings.button_text }}
+    </button>
+  </div>
+</div>
 
-    {% schema %}
+{% schema %}
 {
-    "name": "Custom Newsletter",
-    "settings": [
-        {
-            "type": "text",
-            "id": "heading_text",
-            "label": "Heading Text",
-            "default": "Subscribe to our Newsletter"
-        },
-        {
-            "type": "text",
-            "id": "button_text",
-            "label": "Button Text",
-            "default": "Subscribe"
-        },
-        {
-            "type": "color",
-            "id": "background_color",
-            "label": "Background Color",
-            "default": "#ffffff"
-        },
-        {
-            "type": "color",
-            "id": "button_color",
-            "label": "Button Background Color",
-            "default": "#000000"
-        },
-        {
-            "type": "color",
-            "id": "button_text_color",
-            "label": "Button Text Color",
-            "default": "#ffffff"
-        }
-        ],
-        "presets": [
-        {
-            "name": "Custom Newsletter",
-            "category": "Custom"
-        }
-        ]
+  "name": "Custom Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Subscribe to our Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
     }
-    {% endschema %}
+  ],
+  "presets": [
+    {
+      "name": "Custom Newsletter",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
 
-    <style>
-        .custom-newsletter {
-            padding: 20px;
-            text-align: center;
-        }
-        .custom-newsletter input[type="email"] {
-            padding: 10px;
-            margin-right: 10px;
-            width: 250px;
-            max-width: 100%;
-        }
-        .custom-newsletter button {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+<style>
+  .custom-newsletter {
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .newsletter-content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70dvw;
+  }
+  .newsletter-content h2 {
+    font-weight: 600;
+    font-size: 4rem;
+    margin: 0;
+  }
+  .custom-newsletter button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 white;
+  }
+</style>
