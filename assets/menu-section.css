@@ -28,4 +28,7 @@
     .menu-section-inner{
         flex:50%;
     }
+    .menu-section{
+        row-gap: 3rem;
+    }
 }
