@@ -1,3 +1,5 @@
+{{ 'custom-information.css' | asset_url | stylesheet_tag }}
+
 
 <div class="custom-information-section" style="background-color: {{ section.settings.background_color }}">
     
@@ -22,7 +24,7 @@
             "label": "Heading"
         },
         {
-            "type": "textarea",
+            "type": "richtext",
             "id": "paragraph",
             "label": "Paragraph"
         },

@@ -1,0 +1,19 @@
+.custom-information-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-information-section h2, p {
+    color: #ffffff;
+}
+
+.custom-paragraph{
+    width: 60vw;
+}
+
+.custom-logo{
+    width: 3%;
+}
+
