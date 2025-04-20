@@ -1,0 +1,74 @@
+
+    <div class="custom-newsletter" style="background-color: {{ section.settings.background_color }};">
+        <div class="newsletter-content">
+            <h2>{{ section.settings.heading_text }}</h2>
+            <form method="post" action="/contact#newsletter">
+                <input type="email" name="contact[email]" placeholder="Enter your email" required>
+                <button type="submit" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }};">
+                    {{ section.settings.button_text }}
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {% schema %}
+{
+    "name": "Custom Newsletter",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading Text",
+            "default": "Subscribe to our Newsletter"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Subscribe"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Background Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button Text Color",
+            "default": "#ffffff"
+        }
+        ],
+        "presets": [
+        {
+            "name": "Custom Newsletter",
+            "category": "Custom"
+        }
+        ]
+    }
+    {% endschema %}
+
+    <style>
+        .custom-newsletter {
+            padding: 20px;
+            text-align: center;
+        }
+        .custom-newsletter input[type="email"] {
+            padding: 10px;
+            margin-right: 10px;
+            width: 250px;
+            max-width: 100%;
+        }
+        .custom-newsletter button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
