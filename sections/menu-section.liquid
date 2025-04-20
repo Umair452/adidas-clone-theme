@@ -1,9 +1,9 @@
 {{ 'menu-section.css' | asset_url | stylesheet_tag }}
 
 
-<div class="menuSectionContainer">
 
 <div class="menu-section">
+    <div class="menu-section-inner">
     {% for block in section.blocks %}
         {% if block.type == 'menu_heading' %}
             <h2 class="menu-heading">{{ block.settings.heading_text }}</h2>
@@ -13,6 +13,7 @@
     {% endfor %}
 </div>
 </div>
+
 
 {% schema %}
 {
