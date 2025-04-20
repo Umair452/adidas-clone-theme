@@ -2,11 +2,13 @@
     display: flex;
     justify-content: space-between;
     margin: 4%;
+    flex-wrap: wrap;
 }
 
 .menu-section-inner{
     display: flex;
     flex-direction: column;
+    gap: 3rem;
 }
 
 .menu-section h2{
@@ -16,8 +18,14 @@
 .menu-link{
     text-decoration: none;
     color: #000;
-    margin: 7% 0;
 }
 .menu-link:hover{
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    
+    .menu-section-inner{
+        flex:50%;
+    }
 }
