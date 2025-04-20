@@ -16,7 +16,7 @@
 .menu-link{
     text-decoration: none;
     color: #000;
-    margin: 6%;
+    margin: 6% 0;
 }
 .menu-link:hover{
     text-decoration: underline;
