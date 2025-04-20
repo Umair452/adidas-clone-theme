@@ -336,29 +336,7 @@
     "video": {
       "load_video": "Load video: {{ description }}"
     },
-    "menu": {
-      "blocks": {
-        "menu_heading": {
-          "name": "Menu Heading",
-          "settings": {
-            "heading_text": {
-              "label": "Heading Text"
-            }
-          }
-        },
-        "menu_link": {
-          "name": "Menu Link",
-          "settings": {
-            "link_text": {
-              "label": "Link Text"
-            },
-            "link_url": {
-              "label": "Link URL"
-            }
-          }
-        }
-      }
-    },
+    
     "slideshow": {
       "load_slide": "Load slide",
       "previous_slideshow": "Previous slide",
