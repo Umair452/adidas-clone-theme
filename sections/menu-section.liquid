@@ -3,15 +3,17 @@
 
 
 <div class="menu-section">
-    <div class="menu-section-inner">
+   
     {% for block in section.blocks %}
+        <div class="menu-section-inner">
         {% if block.type == 'menu_heading' %}
             <h2 class="menu-heading">{{ block.settings.heading_text }}</h2>
         {% elsif block.type == 'menu_link' %}
             <a href="{{ block.settings.link_url }}" class="menu-link">{{ block.settings.link_text }}</a>
         {% endif %}
+    </div>
     {% endfor %}
-</div>
+
 </div>
 
 
