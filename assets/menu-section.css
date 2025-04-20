@@ -1,0 +1,21 @@
+.menuSectionContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 4%;
+}
+
+.menu-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-section h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.menu-link{
+    text-decoration: none;;
+}
+.menu-link:hover{
+    text-decoration: underline;
+}

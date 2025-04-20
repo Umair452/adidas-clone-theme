@@ -1,3 +1,7 @@
+{{ 'menu-section.css' | asset_url | stylesheet_tag }}
+
+
+<div class="menuSectionContainer">
 
 <div class="menu-section">
     {% for block in section.blocks %}
@@ -8,7 +12,7 @@
         {% endif %}
     {% endfor %}
 </div>
-
+</div>
 
 {% schema %}
 {
