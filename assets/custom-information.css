@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: 1rem;
+    padding:5% 0;
 }
 .custom-information-inner{
     display: flex;
@@ -14,6 +16,7 @@
 
 .custom-information-section h2, p {
     color: #ffffff;
+    margin: 0;
 }
 
 .custom-heading{
@@ -32,3 +35,8 @@
     width: 3%;
 }
 
+@media (max-width: 768px) {
+    .custom-information-inner{
+        width: 90dvw;
+    }
+}
