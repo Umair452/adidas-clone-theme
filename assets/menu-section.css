@@ -14,7 +14,9 @@
     font-weight: 600;
 }
 .menu-link{
-    text-decoration: none;;
+    text-decoration: none;
+    color: #000;
+    margin: 6%;
 }
 .menu-link:hover{
     text-decoration: underline;
