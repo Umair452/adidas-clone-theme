@@ -20,47 +20,48 @@
     "name": "Menu Section",
     "settings": [],
     "blocks": [
-        {
-            "type": "menu_heading",
-            "name": "Menu Heading",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "heading_text",
-                    "label": "Heading Text"
-                }
-            ]
-        },
-        {
-            "type": "menu_link",
-            "name": "Menu Link",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "link_text",
-                    "label": "Link Text"
-                },
-                {
-                    "type": "url",
-                    "id": "link_url",
-                    "label": "Link URL"
-                }
-            ]
-        }
+      {
+        "type": "menu_heading",
+        "name": "t:sections.menu.blocks.menu_heading.name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "t:sections.menu.blocks.menu_heading.settings.heading_text.label"
+          }
+        ]
+      },
+      {
+        "type": "menu_link",
+        "name": "t:sections.menu.blocks.menu_link.name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "t:sections.menu.blocks.menu_link.settings.link_text.label"
+          },
+          {
+            "type": "url",
+            "id": "link_url",
+            "label": "t:sections.menu.blocks.menu_link.settings.link_url.label"
+          }
+        ]
+      }
     ],
     "presets": [
-        {
-            "name": "Menu Section",
-            "category": "Menu",
-            "blocks": [
-                {
-                    "type": "menu_heading"
-                },
-                {
-                    "type": "menu_link"
-                }
-            ]
-        }
+      {
+        "name": "Menu Section",
+        "category": "Menu",
+        "blocks": [
+          {
+            "type": "menu_heading"
+          },
+          {
+            "type": "menu_link"
+          }
+        ]
+      }
     ]
-}
+  }
+  
 {% endschema %}
