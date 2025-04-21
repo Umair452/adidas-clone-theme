@@ -7,6 +7,7 @@
 
     <button id="newsletterbutton" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }};">
       {{ section.settings.button_text }}
+      {{- 'icon-arrow.svg' | inline_asset_content -}}
     </button>
   </div>
 </div>
