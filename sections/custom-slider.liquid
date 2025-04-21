@@ -906,9 +906,9 @@
           {% endif %}
         </div>
         <div class="swiper-wrapper">
-          {% assign items_size = items_two | size %}
-          {% if items_two != blank %}
-            {% for item in items_two limit: product_show %}
+          {% assign items_size = items | size %}
+          {% if items != blank %}
+            {% for item in items limit: product_show %}
               <a href="{{ item.url }}" class="swiper-slide">
                 <div class="featured-collection-image-{{ section.id }} {% if item.images.size > 1 %} has-secondary-{{ section.id }} {% endif %}">
                   {% if item.images.size > 0 %}
