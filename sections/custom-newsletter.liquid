@@ -1,12 +1,88 @@
+
+{{ 'custom-newsletter.css' | asset_url | stylesheet_tag }}
+
 <div class="custom-newsletter" style="background-color: {{ section.settings.background_color }};">
   <div class="newsletter-content">
     <h2>{{ section.settings.heading_text }}</h2>
 
-    <button style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }};">
+    <button id="newsletterbutton" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_text_color }};">
       {{ section.settings.button_text }}
     </button>
   </div>
 </div>
+
+<div class="newsletterPopup">
+  {% form 'customer', class: 'newsletter-form' %}
+    <input type="hidden" name="contact[tags]" value="newsletter">
+    <div
+      class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+        style="--animation-order: {{ forloop.index }};"
+      {% endif %}
+    >
+      <div class="field">
+        <input
+          id="NewsletterForm--{{ section.id }}"
+          type="email"
+          name="contact[email]"
+          class="field__input"
+          value="{{ form.email }}"
+          aria-required="true"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="email"
+          {% if form.errors %}
+            autofocus
+            aria-invalid="true"
+            aria-describedby="Newsletter-error--{{ section.id }}"
+          {% elsif form.posted_successfully? %}
+            aria-describedby="Newsletter-success--{{ section.id }}"
+          {% endif %}
+          placeholder="{{ 'newsletter.label' | t }}"
+          required
+        >
+        <label class="field__label" for="NewsletterForm--{{ section.id }}">
+          {{ 'newsletter.label' | t }}
+        </label>
+        <button
+          type="submit"
+          class="newsletter-form__button field__button"
+          name="commit"
+          id="Subscribe"
+          aria-label="{{ 'newsletter.button_label' | t }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-arrow.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      </div>
+      {%- if form.errors -%}
+        <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
+          <span class="svg-wrapper">
+            {{- 'icon-error.svg' | inline_asset_content -}}
+          </span>
+          {{- form.errors.translated_fields.email | capitalize }}
+          {{ form.errors.messages.email -}}
+        </small>
+      {%- endif -%}
+    </div>
+    {%- if form.posted_successfully? -%}
+      <h3
+        class="newsletter-form__message newsletter-form__message--success form__message"
+        id="Newsletter-success--{{ section.id }}"
+        tabindex="-1"
+        autofocus
+      >
+        <span class="svg-wrapper">
+          {{- 'icon-success.svg' | inline_asset_content -}}
+        </span>
+        {{- 'newsletter.success' | t }}
+      </h3>
+    {%- endif -%}
+  {% endform %}
+</div>
+
 
 {% schema %}
 {
@@ -52,70 +128,7 @@
 }
 {% endschema %}
 
-<style>
-  .custom-newsletter {
-    padding: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  }
-  .newsletter-content {
-    display: flex;
-    justify-content: space-evenly;
-    width: 70dvw;
-  }
-  .newsletter-content h2 {
-    font-weight: 600;
-    font-size: 4rem;
-    margin: 0;
-  }
-  .custom-newsletter button {
-    appearance: button;
-    background-color: #000;
-    background-image: none;
-    border: 2px solid #000;
-    border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-    font-size: 1.5rem; /* your value */
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0 5px 10px 0;
-    overflow: visible;
-    padding: 10px 20px; /* your value */
-    text-align: center;
-    text-transform: none;
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
   
-  .custom-newsletter button:focus,
-  .custom-newsletter button:hover {
-    text-decoration: none;
-  }
   
-  .custom-newsletter button:active {
-    box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
-    outline: 0;
-  }
-  
-  .custom-newsletter button:not([disabled]):active {
-    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-    transform: translate(2px, 2px);
-  }
-  
-  @media (min-width: 768px) {
-    .custom-newsletter button {
-      padding: 10px 20px; /* Keeping your original padding */
-    }
-  }
-  
-</style>
+
 

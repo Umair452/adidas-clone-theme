@@ -512,6 +512,7 @@
 }
 #bannerText{
   width:fit-content;
+  color:#000000;
 }
 @media(max-width:600px){
   .banner{
