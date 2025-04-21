@@ -1,1 +1,159 @@
-{"sections":{"image_banner_w66QYJ":{"type":"image-banner","blocks":{"heading_qg8n4j":{"type":"heading","settings":{"heading":"ADIZERO ARUKU","heading_size":"h2"}},"text_FEVUfG":{"type":"text","settings":{"text":"Designed for a life in motion.","text_style":"body"}},"buttons_PHYJNt":{"type":"buttons","settings":{"button_label_1":"Shop Men","button_link_1":"#","button_style_secondary_1":false,"button_label_2":"Shop Women","button_link_2":"shopify:\/\/collections\/all","button_style_secondary_2":false,"button_bg":"#f5f5f5","button_text_color":"#000000"}}},"block_order":["heading_qg8n4j","text_FEVUfG","buttons_PHYJNt"],"settings":{"image":"shopify:\/\/shop_images\/banner.jpg","image_overlay_opacity":0,"image_height":"medium","image_behavior":"none","desktop_content_position":"bottom-left","desktop_content_alignment":"left","show_text_box":false,"color_scheme":"scheme-2","stack_images_on_mobile":false,"mobile_content_alignment":"left","show_text_below":false}}},"order":["image_banner_w66QYJ"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_w66QYJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_qg8n4j": {
+          "type": "heading",
+          "settings": {
+            "heading": "ADIZERO ARUKU",
+            "heading_size": "h2"
+          }
+        },
+        "text_FEVUfG": {
+          "type": "text",
+          "settings": {
+            "text": "Designed for a life in motion.",
+            "text_style": "body"
+          }
+        },
+        "buttons_PHYJNt": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Men",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Women",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": false,
+            "button_bg": "#f5f5f5",
+            "button_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qg8n4j",
+        "text_FEVUfG",
+        "buttons_PHYJNt"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-2",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "custom_slider_z6tifq": {
+      "type": "custom-slider",
+      "settings": {
+        "items_mt": 40,
+        "collection": "frontpage",
+        "collection_two": "",
+        "product_list": [],
+        "stack_products": false,
+        "show_bar": false,
+        "top_bar": false,
+        "product_show": 10,
+        "product_per_desktop": 4,
+        "product_per_mobile": "1",
+        "image_radius": 0,
+        "image_ration": "portrait",
+        "use_custom_height": false,
+        "image_height_desktop": 400,
+        "image_height_mobile": 200,
+        "show_second": true,
+        "use_shadow": false,
+        "use_radius": false,
+        "card_padding_horizontal": 4,
+        "card_padding_vertical": 16,
+        "card_title_custom": false,
+        "card_title_font": "assistant_n4",
+        "card_title_size": 24,
+        "card_title_letter": 0,
+        "card_title_height": 100,
+        "heading": "Featured collection",
+        "heading_custom": false,
+        "heading_font": "assistant_n4",
+        "heading_size": 50,
+        "heading_letter": 0,
+        "heading_height": 100,
+        "heading_align": "center",
+        "sub_heading": "",
+        "sub_heading_custom": false,
+        "sub_heading_font": "assistant_n4",
+        "sub_heading_size": 50,
+        "sub_heading_letter": 0,
+        "sub_heading_height": 100,
+        "sub_heading_align": "center",
+        "invert_content": false,
+        "link": "View all",
+        "link_url": "",
+        "link_custom": false,
+        "link_font": "assistant_n4",
+        "link_size": 18,
+        "link_letter": 0,
+        "link_height": 100,
+        "link_position": false,
+        "link_mobile": true,
+        "card_price_custom": false,
+        "card_price_font": "assistant_n4",
+        "card_price_size": 16,
+        "card_price_letter": 0,
+        "card_price_height": 100,
+        "card_price_mt": 12,
+        "arrow_size": 50,
+        "arrow_size_mobile": 40,
+        "arrow_hide_mobile": false,
+        "link_color": "#000000",
+        "link_hover_color": "#000000",
+        "link_arrow_color": "#000000",
+        "link_background_color": "#E6E6E6",
+        "link_background_hover_color": "#000000",
+        "card_content_bg_color": "#FFFFFF",
+        "card_title_color": "#000000",
+        "card_price_color": "#000000",
+        "arrow_color": "#000000",
+        "arrow_hover_color": "#000000",
+        "arrow_bg_color": "#F2F2F2",
+        "arrow_bg_hover_color": "#F2F2F2",
+        "arrow_border_color": "#C4C4C4",
+        "arrow_border_hover_color": "#C4C4C4",
+        "progress_color": "#000000",
+        "heading_color": "#000000",
+        "sub_heading_color": "#000000",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 130,
+        "border_thickness": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner_w66QYJ",
+    "custom_slider_z6tifq"
+  ]
+}
