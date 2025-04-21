@@ -98,11 +98,6 @@
     assign items = collection.products
   endif
 
-  if product_list != blank
-    assign items_two = product_list
-  else
-    assign items_two = collection_two.products
-  endif
 
   unless stack_products
     assign product_per_mobile_big = product_per_mobile | times: 2 | round: 0
@@ -905,57 +900,7 @@
             {% endfor %}
           {% endif %}
         </div>
-        <div class="swiper-wrapper">
-          {% assign items_size = items | size %}
-          {% if items != blank %}
-            {% for item in items limit: product_show %}
-              <a href="{{ item.url }}" class="swiper-slide">
-                <div class="featured-collection-image-{{ section.id }} {% if item.images.size > 1 %} has-secondary-{{ section.id }} {% endif %}">
-                  {% if item.images.size > 0 %}
-                    <img width="" height=""
-                      class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}"
-                      src="{{ item.featured_image | image_url }}"
-                    >
-                  {% else %}
-                    {{ 'collection-1' | placeholder_svg_tag }}
-                  {% endif %}
-                  {% if item.images.size > 1 %}
-                    {% for img in item.images %}
-                      {% if forloop.index == 2 %}
-                        <img class="featured-collection-second-image-{{ section.id }}" src="{{ img | image_url }}">
-                      {% endif %}
-                    {% endfor %}
-                  {% endif %}
-                </div>
-                <div class="featured-collection-content-{{ section.id }}">
-                  <p class="featured-collection-title-{{ section.id }}">{{ item.title }}</p>
-                  <p class="featured-collection-price-{{ section.id }}">
-                    {% if item.selected_or_first_available_variant.compare_at_price
-                        > item.selected_or_first_available_variant.price
-                    -%}
-                      {{ item.selected_or_first_available_variant.price | money }}
-                      <span>{{ item.selected_or_first_available_variant.compare_at_price | money }}</span>
-                    {%- else -%}
-                      {{- item.selected_or_first_available_variant.price | money -}}
-                    {%- endif %}
-                  </p>
-                </div>
-              </a>
-            {% endfor %}
-          {% else %}
-            {% for item in (1..product_show) %}
-              <a href="{{ item.url }}" class="swiper-slide">
-                <div class="featured-collection-image-{{ section.id }}">
-                  {{ 'image' | placeholder_svg_tag }}
-                </div>
-                <div class="featured-collection-content-{{ section.id }}">
-                  <p class="featured-collection-title-{{ section.id }}">Title</p>
-                  <p class="featured-collection-price-{{ section.id }}">Price</p>
-                </div>
-              </a>
-            {% endfor %}
-          {% endif %}
-        </div>
+        
         <div class="featured-collection-btn-prev-{{ section.id }}">
           <span class="animate-icon"></span>
         </div>
